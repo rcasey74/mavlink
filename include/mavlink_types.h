@@ -142,7 +142,8 @@ enum MAV_FRAME
 {
     MAV_FRAME_GLOBAL = 0,
     MAV_FRAME_LOCAL = 1,
-    MAV_FRAME_MISSION = 2
+    MAV_FRAME_MISSION = 2,
+	MAV_FRAME_GLOBAL_RELATIVE_ALT = 3
 };
 
 #define MAVLINK_STX 0x55 ///< Packet start sign
@@ -181,10 +182,21 @@ typedef enum {
     MAVLINK_COMM_0,
     MAVLINK_COMM_1,
     MAVLINK_COMM_2,
-    MAVLINK_COMM_3,
-    MAVLINK_COMM_NB,
-    MAVLINK_COMM_NB_HIGH = 16
-                       } mavlink_channel_t;
+    MAVLINK_COMM_3
+} mavlink_channel_t;
+
+/*
+ * applications can set MAVLINK_COMM_NUM_BUFFERS to the maximum number
+ * of buffers they will use. If more are used, then the result will be
+ * a stack overrun
+ */
+#ifndef MAVLINK_COMM_NUM_BUFFERS
+#if (defined linux) | (defined __linux) | (defined  __MACH__) | (defined _WIN32)
+# define MAVLINK_COMM_NUM_BUFFERS 16
+#else
+# define MAVLINK_COMM_NUM_BUFFERS 4
+#endif
+#endif
 
 typedef enum {
     MAVLINK_PARSE_STATE_UNINIT=0,
