@@ -141,10 +141,10 @@ This message configures the Selective Passthrough mode. it allows to select whic
   <message name="SLUGS_CAMERA_ORDER" id="184">
      Orders generated to the SLUGS camera mount. 
      <field name="target" type="uint8_t">The system reporting the action</field>
-     <field name="pan" type="uint8_t">Order the mount to pan: -1 left, 0 No pan motion, +1 right</field>
-     <field name="tilt" type="uint8_t">Order the mount to tilt: -1 down, 0 No tilt motion, +1 up</field>
-     <field name="zoom" type="uint8_t">Order the camera to zoom: -1 zoom out, 0 No zoom change, +1 zoom in</field>
-     <field name="moveHome" type="uint8_t">Orders the camera mount to move home. The other fields are ignored when this field is set. 1: move home, 0 ignored</field>
+     <field name="pan" type="int8_t">Order the mount to pan: -1 left, 0 No pan motion, +1 right</field>
+     <field name="tilt" type="int8_t">Order the mount to tilt: -1 down, 0 No tilt motion, +1 up</field>
+     <field name="zoom" type="int8_t">Order the camera to zoom: -1 zoom out, 0 No zoom change, +1 zoom in</field>
+     <field name="moveHome" type="int8_t">Orders the camera mount to move home. The other fields are ignored when this field is set. 1: move home, 0 ignored</field>
   </message>
 
 

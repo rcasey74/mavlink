@@ -1,7 +1,7 @@
 /** @file
  *	@brief MAVLink comm protocol.
  *	@see http://pixhawk.ethz.ch/software/mavlink
- *	 Generated on Tuesday, March 15 2011, 14:30 UTC
+ *	 Generated on Wednesday, March 16 2011, 20:29 UTC
  */
 #ifndef SLUGS_H
 #define SLUGS_H
