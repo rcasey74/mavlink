@@ -1,7 +1,7 @@
 /** @file
  *	@brief MAVLink comm protocol.
  *	@see http://pixhawk.ethz.ch/software/mavlink
- *	 Generated on Friday, March 11 2011, 20:30 UTC
+ *	 Generated on Tuesday, March 15 2011, 14:30 UTC
  */
 #ifndef SLUGS_H
 #define SLUGS_H
@@ -43,6 +43,7 @@ extern "C" {
 #include "./mavlink_msg_mid_lvl_cmds.h"
 #include "./mavlink_msg_ctrl_srfc_pt.h"
 #include "./mavlink_msg_slugs_action.h"
+#include "./mavlink_msg_slugs_camera_order.h"
 #ifdef __cplusplus
 }
 #endif
